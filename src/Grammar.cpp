@@ -13,8 +13,8 @@ void Grammar::Read ( char const *filein ) {
   std::ifstream infile( filein );
 
   auto commentlambda = []( std::ifstream &infile, std::string &a ) {
-    if ( a[0] && a [1] == '/' ) {
-      while ( a[0] && a [1] == '/' ) {
+    if ( a[0] && a[1] == '/' ) {
+      while ( a[0] && a[1] == '/' ) {
         std::getline( infile, a );
       }
       return a;
@@ -56,7 +56,7 @@ void Grammar::Read ( char const *filein ) {
         s_ = commentlambda( infile, str1 )[0];
         std::getline( infile, str1 );
         std::string totalProductions = commentlambda( infile, str1 );
-        for ( int i = 0; i < ( (int)totalProductions[0] - 48) ; i++ ) {
+        for ( int i = 0; i < ( std::stoi( totalProductions ) ) ; i++ ) {
           
           std::getline( infile, str1 );
           std::stringstream ss( str1 );
@@ -82,7 +82,7 @@ void Grammar::Read ( char const *filein ) {
           }
           Production p1;
 
-          if( productionsAux.size() == 1 && !nt_.count(productionsAux[0]) && productionsAux[0] != '~') { // tamaño 1 y simbolo terminal
+          if( productionsAux.size() == 1 && nt_.count(productionsAux[0]) ) { // tamaño 1 y simbolo terminal
             p1.set_state( State );
             auto it = productionsAux.begin();
             it = productionsAux.insert(it, '~');
