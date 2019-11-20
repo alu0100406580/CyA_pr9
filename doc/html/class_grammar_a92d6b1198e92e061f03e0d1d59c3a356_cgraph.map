@@ -1,0 +1,10 @@
+<map id="Grammar::convertG2CNF" name="Grammar::convertG2CNF">
+<area shape="rect" id="node2" href="$class_production.html#a827e3736c647ff5c80551a60b23b6c58" title="Devuelve el estado. " alt="" coords="251,5,398,32"/>
+<area shape="rect" id="node3" href="$class_production.html#a124ec980490dede5dbf4cb307f2ef20f" title="Escribe la producción. " alt="" coords="236,56,413,83"/>
+<area shape="rect" id="node4" href="$class_grammar.html#aa050422985b69043b68fa569e65ad58a" title="Exportar gramática a fichero. " alt="" coords="265,107,384,133"/>
+<area shape="rect" id="node5" href="$class_grammar.html#ae5e4ba01c0c264aca88443ed49d57ad1" title="Obtiene los no terminales. " alt="" coords="265,157,385,184"/>
+<area shape="rect" id="node6" href="$class_grammar.html#a0ab76944129c872e2d69f0b749d8942c" title="devuelve el vector de Producciones " alt="" coords="237,208,413,235"/>
+<area shape="rect" id="node7" href="$class_grammar.html#a5f6e21f0de2f36c9d9609ea2c881dbf7" title="nos devuelve el alfabeto " alt="" coords="245,259,404,285"/>
+<area shape="rect" id="node8" href="$class_grammar.html#af52305c1815f71e4720adbf50174d53e" title="Devuelve el estado de arranque. " alt="" coords="267,309,383,336"/>
+<area shape="rect" id="node9" href="$class_grammar.html#a4ea8f325aff532f6b8a1dd1247e6fc84" title="nos devuelve el numero de estados Terminales (Para convertir a DFA/NFA si hubiera sido el caso) ..." alt="" coords="225,360,424,387"/>
+</map>

@@ -1,9 +1,9 @@
 # Macros
 
 CXX = g++ -std=c++11
-CFLAGS = -g -Wall -O2 
-SRC = src/G2CNF.cpp src/Grammar.hpp src/Rule.hpp src/Production.hpp
-OBJ = src/G2CNF.o src/Rule.o src/Grammar.o src/Production.o
+CFLAGS = -g #-Wall -O2
+SRC = src/G2CNF.cpp src/Grammar.hpp src/Production.hpp #src/Rule.hpp
+OBJ = src/G2CNF.o src/Grammar.o src/Production.o #src/Rule.o
 
 # Reglas explícitas
 
@@ -22,8 +22,8 @@ run: #main.o
 		 ./G2CNF
 
 ejec: #main.o
-		 ./G2CNF 1.gra 2.nfa
+		 ./G2CNF 1.gra fnc
 
 modif: #main.o
-	   ./G2CNF 1.gra 2.nfa
+	   ./G2CNF 1.gra fnc
 

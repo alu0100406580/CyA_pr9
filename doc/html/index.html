@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PRACTICA 9: Forma Normal de Chomsky de una Gramática Independiente del Contexto: PRACTICA 9: Forma Normal de Chomsky de una Gramática Independiente del Contexto</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ull-logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PRACTICA 9: Forma Normal de Chomsky de una Gramática Independiente del Contexto
+   </div>
+   <div id="projectbrief">Forma Normal de Chomsky de una Gramática Independiente del Contexto</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PRACTICA 9: Forma Normal de Chomsky de una Gramática Independiente del Contexto </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2>9.1. Objetivos</h2>
+<ul>
+<li>Consolidar los conocimientos adquiridos sobre Gramáticas.</li>
+<li>Estudiar y practicar el algoritmo de transformación de una gramática a su forma normal de Chomsky.</li>
+<li>Ampliar las funcionalidades definidas en la clase que se ha desarrollado para representar Gramáticas.</li>
+<li>Profundizar en las capacidades de diseñar y desarrollar programas orientados a objetos en C++.</li>
+</ul>
+<h2>9.3. Ejercicio práctico</h2>
+<p>Desarrollar un programa <a class="el" href="_g2_c_n_f_8cpp.html">G2CNF.cpp</a> que lea un fichero de texto en el que figura la especificación de una Gramática Independiente del Contexto que no contenga sı́mbolos ni producciones inútiles, unitarias ni vacı́as, y genere otro fichero de texto en el que se especifique una gramática equivalente (L(G in ) = L(G out )) a la de entrada, escrita en Forma Normal de Chomsky. El comportamiento del programa al ejecutarse en lı́nea de comandos debiera ser: </p><div class="fragment"><div class="line">$ ./G2CNF</div><div class="line">Modo de empleo: ./G2CNF input.gra output.gra</div><div class="line">Pruebe ‘G2CNF --help’ para más información.</div></div><!-- fragment --><p> Donde input.gra y output.gra son los ficheros que especifican las gramáticas de entrada y salida respectivamente. La opción &ndash;help en lı́nea de comandos ha de producir que se imprima en pantalla un breve texto explicativo del funcionamiento del programa. Los ficheros de especificación de gramáticas son ficheros de texto plano con extensión .gra que contienen los elementos definitorios de la Gramática G ≡ (Σ, V, S, P) en este orden: sı́mbolos terminales, sı́mbolos no terminales, sı́mbolo de arranque y producciones. El formato de cada uno de estos elementos en el fichero es el siguiente:</p><ol type="1">
+<li>Sı́mbolos terminales (alfabeto): una lı́nea que contiene N, el número de sı́mbolos en el alfabeto seguida de N lı́neas, cada una de las cuales contiene un sı́mbolo del alfabeto. Cada sı́mbolo del alfabeto debe ser un único caracter imprimible.</li>
+<li>Conjunto de sı́mbolos no terminales: una lı́nea que contiene V, el número de sı́mbolos no terminales, seguida de V lı́neas, cada una de las cuales contiene una cadena alfanumérica sin espacios.</li>
+<li>Sı́mbolo de arranque: una única lı́nea que contiene el sı́mbolo de arranque, S, de la gramática. Ha de ser uno de los sı́mbolos no terminales relacionados anteriormente.</li>
+<li>Producciones: una lı́nea que contiene P, el número de producciones de la gramática, seguida por P lı́neas cada una de las cuales contiene una producción en el formato: A -&gt; α siendo α ∈ (Σ∪V ) ∗ , es decir una secuencia de sı́mbolos terminales y no terminales. La cadena vacı́a,  se representa mediante el carácter ~ (código ASCII 126). Todas las lı́neas de un fichero .gra que comiencen con los caracteres // corresponden a comentarios, y deben ser ignorados por el programa a la hora de procesar el fichero. </li>
+</ol>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

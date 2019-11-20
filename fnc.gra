@@ -1,0 +1,32 @@
+2
+a
+b
+8
+J
+K
+L
+M
+N
+S
+X
+Y
+S
+18
+S -> JM
+S -> JL
+S -> JN
+S -> JK
+X -> JY
+X -> KY
+X -> a
+X -> b
+Y -> JY
+Y -> KY
+Y -> a
+Y -> b
+Y -> c
+J -> a
+K -> b
+L -> KX
+M -> XL
+N -> XK

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PRACTICA 9: Forma Normal de Chomsky de una Gramática Independiente del Contexto: Fichero Fuente src/Grammar.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ull-logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PRACTICA 9: Forma Normal de Chomsky de una Gramática Independiente del Contexto
+   </div>
+   <div id="projectbrief">Forma Normal de Chomsky de una Gramática Independiente del Contexto</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Grammar.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_grammar_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef Grammar_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define Grammar_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//#include &quot;Rule.hpp&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_production_8hpp.html">Production.hpp</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_grammar.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_grammar.html">Grammar</a> {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;     </div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">private</span>:</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    set&lt; char &gt; nt_;                    <span class="comment">//coleccion de símbolos no terminales</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">char</span> s_;                            <span class="comment">//no terminal llamado símbolo inicial o de arranque</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    vector&lt; Production &gt; productions_;  <span class="comment">//colección de reglas de sustitución denominadas producciones</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    set&lt; char &gt; alphabet_;              <span class="comment">//alfabeto</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    vector&lt; char &gt; labels_ = {<span class="charliteral">&#39;J&#39;</span>, <span class="charliteral">&#39;K&#39;</span>, <span class="charliteral">&#39;L&#39;</span>, <span class="charliteral">&#39;M&#39;</span>, <span class="charliteral">&#39;N&#39;</span>, <span class="charliteral">&#39;O&#39;</span>, <span class="charliteral">&#39;P&#39;</span>, <span class="charliteral">&#39;Q&#39;</span>, <span class="charliteral">&#39;R&#39;</span>, <span class="charliteral">&#39;T&#39;</span>, <span class="charliteral">&#39;U&#39;</span>, <span class="charliteral">&#39;V&#39;</span>, <span class="charliteral">&#39;W&#39;</span>, <span class="charliteral">&#39;X&#39;</span>, <span class="charliteral">&#39;Y&#39;</span>, <span class="charliteral">&#39;Z&#39;</span> };</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> endingSymbols_;                 <span class="comment">//Estados de aceptación (contienen la cadena vacía)</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">public</span>:</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_grammar.html">Grammar</a>();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_grammar.html">Grammar</a>( <span class="keywordtype">char</span> <span class="keyword">const</span> *filein, <span class="keywordtype">char</span> <span class="keyword">const</span> *fileout );</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_grammar.html">Grammar</a>( <span class="keyword">const</span> <a class="code" href="class_grammar.html">Grammar</a> &amp;g );</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ~<a class="code" href="class_grammar.html">Grammar</a>();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> Read( <span class="keywordtype">char</span> <span class="keyword">const</span> * );</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> convertG2CNF( std::string );</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> to_file( std::string );</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    set&lt; char &gt; getnt_( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">char</span> gets_( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    vector&lt; Production &gt; getproductions_( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    set&lt; char &gt; getalphabet_( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">int</span> getendingSymbols_( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">friend</span> ostream&amp; <a class="code" href="_grammar_8cpp.html#ad24325b2deffa53cd92880f7e7c6a157">operator &lt;&lt; </a>(ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_grammar.html">Grammar</a>&amp; g);</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_grammar_html"><div class="ttname"><a href="class_grammar.html">Grammar</a></div><div class="ttdef"><b>Definition:</b> <a href="_grammar_8hpp_source.html#l00020">Grammar.hpp:20</a></div></div>
+<div class="ttc" id="_grammar_8cpp_html_ad24325b2deffa53cd92880f7e7c6a157"><div class="ttname"><a href="_grammar_8cpp.html#ad24325b2deffa53cd92880f7e7c6a157">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, const Grammar &amp;g)</div><div class="ttdef"><b>Definition:</b> <a href="_grammar_8cpp_source.html#l00286">Grammar.cpp:286</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="_production_8hpp_html"><div class="ttname"><a href="_production_8hpp.html">Production.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

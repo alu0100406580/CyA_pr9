@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PRACTICA 9: Forma Normal de Chomsky de una Gramática Independiente del Contexto: Fichero Fuente src/Production.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="ull-logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PRACTICA 9: Forma Normal de Chomsky de una Gramática Independiente del Contexto
+   </div>
+   <div id="projectbrief">Forma Normal de Chomsky de una Gramática Independiente del Contexto</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Production.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_production_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef Production_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define Production_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_production.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_production.html">Production</a> {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keyword">private</span>:</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">char</span> state_= <span class="charliteral">&#39;\0&#39;</span>;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::string production_;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    </div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">public</span>:</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_production.html#a12c7c685be71ed51ac10f7d0284e8d4f">Production</a>();</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="class_production.html#aff00b85fabf422326fd1db799573a1c1">get_state</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::string <a class="code" href="class_production.html#aab58d10dc1d2f5f9c29f6629d7936f8a">get_production</a>( <span class="keywordtype">void</span> ) <span class="keyword">const</span>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_production.html#a827e3736c647ff5c80551a60b23b6c58">set_state</a>( <span class="keywordtype">char</span>&amp; );</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_production.html#a124ec980490dede5dbf4cb307f2ef20f">set_production</a>( std::string&amp; );</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="class_production.html#a91a522f069ea3ed7f496107bef4277ac">operator &lt;&lt; </a>( std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_production.html">Production</a>&amp; p);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_production_html_a91a522f069ea3ed7f496107bef4277ac"><div class="ttname"><a href="class_production.html#a91a522f069ea3ed7f496107bef4277ac">Production::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const Production &amp;p)</div><div class="ttdoc">Sobrecarga operador &lt;&lt;. </div><div class="ttdef"><b>Definition:</b> <a href="_production_8cpp_source.html#l00022">Production.cpp:22</a></div></div>
+<div class="ttc" id="class_production_html_a12c7c685be71ed51ac10f7d0284e8d4f"><div class="ttname"><a href="class_production.html#a12c7c685be71ed51ac10f7d0284e8d4f">Production::Production</a></div><div class="ttdeci">Production()</div><div class="ttdoc">Constructor por defecto de producciones. </div><div class="ttdef"><b>Definition:</b> <a href="_production_8cpp_source.html#l00003">Production.cpp:3</a></div></div>
+<div class="ttc" id="class_production_html_a124ec980490dede5dbf4cb307f2ef20f"><div class="ttname"><a href="class_production.html#a124ec980490dede5dbf4cb307f2ef20f">Production::set_production</a></div><div class="ttdeci">void set_production(std::string &amp;)</div><div class="ttdoc">Escribe la producción. </div><div class="ttdef"><b>Definition:</b> <a href="_production_8cpp_source.html#l00017">Production.cpp:17</a></div></div>
+<div class="ttc" id="class_production_html"><div class="ttname"><a href="class_production.html">Production</a></div><div class="ttdef"><b>Definition:</b> <a href="_production_8hpp_source.html#l00008">Production.hpp:8</a></div></div>
+<div class="ttc" id="class_production_html_aff00b85fabf422326fd1db799573a1c1"><div class="ttname"><a href="class_production.html#aff00b85fabf422326fd1db799573a1c1">Production::get_state</a></div><div class="ttdeci">char get_state() const</div><div class="ttdoc">Devuelve el estado de la producción. </div><div class="ttdef"><b>Definition:</b> <a href="_production_8cpp_source.html#l00005">Production.cpp:5</a></div></div>
+<div class="ttc" id="class_production_html_a827e3736c647ff5c80551a60b23b6c58"><div class="ttname"><a href="class_production.html#a827e3736c647ff5c80551a60b23b6c58">Production::set_state</a></div><div class="ttdeci">void set_state(char &amp;)</div><div class="ttdoc">Devuelve el estado. </div><div class="ttdef"><b>Definition:</b> <a href="_production_8cpp_source.html#l00013">Production.cpp:13</a></div></div>
+<div class="ttc" id="class_production_html_aab58d10dc1d2f5f9c29f6629d7936f8a"><div class="ttname"><a href="class_production.html#aab58d10dc1d2f5f9c29f6629d7936f8a">Production::get_production</a></div><div class="ttdeci">std::string get_production(void) const</div><div class="ttdoc">Devuelve la producción. </div><div class="ttdef"><b>Definition:</b> <a href="_production_8cpp_source.html#l00009">Production.cpp:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

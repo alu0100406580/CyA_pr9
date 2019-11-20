@@ -6,11 +6,8 @@
 * Correo: alu0100406580@ull.edu.es
 * Fecha: 21/11/2019
 * Archivo main.cpp: programa cliente. Contiene la función main del proyecto
-                     que usa la clase ER2tree que realizan el trabajo de leer el
-                     fichero de entrada para trabajar creando la gramática para 
-                     luego generar un NFA
-                    Tiene también la función Help() para dar ayuda al cliente al
-                     saber como se ejecutará el programa si lo inicializa mal.
+                     que convierte una Gramática Independiente del Contexto
+                     a FNC.
 * Referencias: 
 *                    Enunciado de la práctica:
 *                    doc/CYA_1920_Practica_9.pdf
