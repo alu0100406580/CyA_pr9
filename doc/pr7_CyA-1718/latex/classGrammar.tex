@@ -1,0 +1,84 @@
+\hypertarget{classGrammar}{}\section{Grammar Class Reference}
+\label{classGrammar}\index{Grammar@{Grammar}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGrammar_aa201250a002a7d07d398fee189a74427}{Grammar} ()
+\item 
+\hyperlink{classGrammar_a9967f494986966474267d78fdcfb4f21}{Grammar} (\hyperlink{classDfa}{Dfa} \&)
+\item 
+void \hyperlink{classGrammar_a2c28aeb71715bc301aea63234d33652d}{define\+\_\+productions} (\hyperlink{classDfa}{Dfa} \&)
+\item 
+void \hyperlink{classGrammar_a02add08e9944e01c77d002e585ac1f0d}{to\+\_\+file} (string)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classGrammar_ad24325b2deffa53cd92880f7e7c6a157}{operator$<$$<$} (ostream \&os, const \hyperlink{classGrammar}{Grammar} \&g)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Grammar@{Grammar}!Grammar@{Grammar}}
+\index{Grammar@{Grammar}!Grammar@{Grammar}}
+\subsubsection[{\texorpdfstring{Grammar()}{Grammar()}}]{\setlength{\rightskip}{0pt plus 5cm}Grammar\+::\+Grammar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGrammar_aa201250a002a7d07d398fee189a74427}{}\label{classGrammar_aa201250a002a7d07d398fee189a74427}
+Contructor por defecto clase \hyperlink{classState}{State} \index{Grammar@{Grammar}!Grammar@{Grammar}}
+\index{Grammar@{Grammar}!Grammar@{Grammar}}
+\subsubsection[{\texorpdfstring{Grammar(\+Dfa \&)}{Grammar(Dfa &)}}]{\setlength{\rightskip}{0pt plus 5cm}Grammar\+::\+Grammar (
+\begin{DoxyParamCaption}
+\item[{{\bf Dfa} \&}]{dfa}
+\end{DoxyParamCaption}
+)}\hypertarget{classGrammar_a9967f494986966474267d78fdcfb4f21}{}\label{classGrammar_a9967f494986966474267d78fdcfb4f21}
+Contructor por clase \hyperlink{classState}{State} para crear Gramática a partir de un D\+FA 
+\begin{DoxyParams}{Parameters}
+{\em dfa} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Grammar@{Grammar}!define\+\_\+productions@{define\+\_\+productions}}
+\index{define\+\_\+productions@{define\+\_\+productions}!Grammar@{Grammar}}
+\subsubsection[{\texorpdfstring{define\+\_\+productions(\+Dfa \&)}{define_productions(Dfa &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Grammar\+::define\+\_\+productions (
+\begin{DoxyParamCaption}
+\item[{{\bf Dfa} \&}]{dfa}
+\end{DoxyParamCaption}
+)}\hypertarget{classGrammar_a2c28aeb71715bc301aea63234d33652d}{}\label{classGrammar_a2c28aeb71715bc301aea63234d33652d}
+Definir reglas y producciones a partir del dfa 
+\begin{DoxyParams}{Parameters}
+{\em dfa} & \\
+\hline
+\end{DoxyParams}
+\index{Grammar@{Grammar}!to\+\_\+file@{to\+\_\+file}}
+\index{to\+\_\+file@{to\+\_\+file}!Grammar@{Grammar}}
+\subsubsection[{\texorpdfstring{to\+\_\+file(string)}{to_file(string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Grammar\+::to\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{string}]{filename}
+\end{DoxyParamCaption}
+)}\hypertarget{classGrammar_a02add08e9944e01c77d002e585ac1f0d}{}\label{classGrammar_a02add08e9944e01c77d002e585ac1f0d}
+Exportar D\+FA a fichero 
+\begin{DoxyParams}{Parameters}
+{\em nombre} & fichero \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Grammar@{Grammar}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Grammar@{Grammar}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Grammar} \&}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classGrammar_ad24325b2deffa53cd92880f7e7c6a157}{}\label{classGrammar_ad24325b2deffa53cd92880f7e7c6a157}
+Sobrecarga operador de salida 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Grammar.\+hpp\item 
+src/Grammar.\+cpp\end{DoxyCompactItemize}

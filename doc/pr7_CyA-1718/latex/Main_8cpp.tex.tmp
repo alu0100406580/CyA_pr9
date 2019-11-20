@@ -1,0 +1,25 @@
+\hypertarget{Main_8cpp}{}\section{src/\+Main.cpp File Reference}
+\label{Main_8cpp}\index{src/\+Main.\+cpp@{src/\+Main.\+cpp}}
+
+
+Fichero que contiene la función main del programa.  
+
+
+{\ttfamily \#include \char`\"{}Dfa.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Grammar.\+hpp\char`\"{}}\\*
+Include dependency graph for Main.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})\hypertarget{Main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{Main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichero que contiene la función main del programa. 
+
+Darío Afonso Rodríguez (\href{mailto:alu0100406580@ull.edu.es}{\tt alu0100406580@ull.\+edu.\+es}) \begin{DoxyDate}{Date}
+Noviembre, 2017 
+\end{DoxyDate}

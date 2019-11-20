@@ -1,0 +1,80 @@
+\hypertarget{classDfa}{}\section{Dfa Class Reference}
+\label{classDfa}\index{Dfa@{Dfa}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDfa_a8b4306c41ff0004264f56563e4399992}{Dfa} ()
+\item 
+\hyperlink{classDfa_a2d110a2cc46b2dab6e6f9e901639b0cd}{$\sim$\+Dfa} ()
+\item 
+bool \hyperlink{classDfa_a54b373da1b88485641d0aa0e5fa303dd}{read\+\_\+dfa} (const string \&)
+\item 
+const set$<$ \hyperlink{classState}{State} $>$ \& \hyperlink{classDfa_a5f6b650f05ec3b8a5aa862c0f513c19e}{getallstates} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classDfa_ae4bcdc6c0f5c2374f14902fd5e073c7d}{operator$<$$<$} (ostream \&os, const \hyperlink{classDfa}{Dfa} \&dfa)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Dfa@{Dfa}!Dfa@{Dfa}}
+\index{Dfa@{Dfa}!Dfa@{Dfa}}
+\subsubsection[{\texorpdfstring{Dfa()}{Dfa()}}]{\setlength{\rightskip}{0pt plus 5cm}Dfa\+::\+Dfa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDfa_a8b4306c41ff0004264f56563e4399992}{}\label{classDfa_a8b4306c41ff0004264f56563e4399992}
+Constructor por defecto de la clase \hyperlink{classDfa}{Dfa} \index{Dfa@{Dfa}!````~Dfa@{$\sim$\+Dfa}}
+\index{````~Dfa@{$\sim$\+Dfa}!Dfa@{Dfa}}
+\subsubsection[{\texorpdfstring{$\sim$\+Dfa()}{~Dfa()}}]{\setlength{\rightskip}{0pt plus 5cm}Dfa\+::$\sim$\+Dfa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDfa_a2d110a2cc46b2dab6e6f9e901639b0cd}{}\label{classDfa_a2d110a2cc46b2dab6e6f9e901639b0cd}
+Destructor de la clase \hyperlink{classDfa}{Dfa} 
+
+\subsection{Member Function Documentation}
+\index{Dfa@{Dfa}!getallstates@{getallstates}}
+\index{getallstates@{getallstates}!Dfa@{Dfa}}
+\subsubsection[{\texorpdfstring{getallstates()}{getallstates()}}]{\setlength{\rightskip}{0pt plus 5cm}const set$<$ {\bf State} $>$ \& Dfa\+::getallstates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDfa_a5f6b650f05ec3b8a5aa862c0f513c19e}{}\label{classDfa_a5f6b650f05ec3b8a5aa862c0f513c19e}
+Obtener un vector con todos los estados del dfa \begin{DoxyReturn}{Returns}
+vector de estados 
+\end{DoxyReturn}
+\index{Dfa@{Dfa}!read\+\_\+dfa@{read\+\_\+dfa}}
+\index{read\+\_\+dfa@{read\+\_\+dfa}!Dfa@{Dfa}}
+\subsubsection[{\texorpdfstring{read\+\_\+dfa(const string \&)}{read_dfa(const string &)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Dfa\+::read\+\_\+dfa (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{classDfa_a54b373da1b88485641d0aa0e5fa303dd}{}\label{classDfa_a54b373da1b88485641d0aa0e5fa303dd}
+Leer dfa de un fichero 
+\begin{DoxyParams}{Parameters}
+{\em nombre} & fichero \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+fichero leído o no 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Dfa@{Dfa}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dfa@{Dfa}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Dfa} \&}]{dfa}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classDfa_ae4bcdc6c0f5c2374f14902fd5e073c7d}{}\label{classDfa_ae4bcdc6c0f5c2374f14902fd5e073c7d}
+Sobrecarga operador de salida 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Dfa.\+hpp\item 
+src/Dfa.\+cpp\end{DoxyCompactItemize}

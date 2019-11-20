@@ -1,0 +1,152 @@
+\hypertarget{classTransition}{}\section{Transition Class Reference}
+\label{classTransition}\index{Transition@{Transition}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTransition_a73b44b2338b11807f77b620a3e810f92}{Transition} ()
+\item 
+\hyperlink{classTransition_ab49cf908eba3466ddcd65b144d3c2fc4}{Transition} (char, unsigned int)
+\item 
+\hyperlink{classTransition_a3a95a02ec9471b3af89c3f1b947048fc}{Transition} (const \hyperlink{classTransition}{Transition} \&t)
+\item 
+char \hyperlink{classTransition_a26d9d8a40925443d053594fedeae812f}{getsymbol} () const 
+\item 
+unsigned int \hyperlink{classTransition_a2cd33705526d2cf4806605b5bd18c46b}{gettostate} () const 
+\item 
+void \hyperlink{classTransition_a5a20b15b7f4ab032742ad6391190cc6e}{setsymbol} (char \&)
+\item 
+void \hyperlink{classTransition_a6534cb4975a33db21fc273e578c32ff1}{settostate} (int \&)
+\item 
+\hyperlink{classTransition}{Transition} \& \hyperlink{classTransition_aff02d7ec6996e757e62e863f09dda47e}{operator=} (const \hyperlink{classTransition}{Transition} \&rhs)
+\item 
+int \hyperlink{classTransition_a0eb7dbe96740da9acc628b90c28932ee}{operator==} (const \hyperlink{classTransition}{Transition} \&rhs) const 
+\item 
+int \hyperlink{classTransition_a858e1b8e385b0fd83fdd5719c56cb50f}{operator$<$} (const \hyperlink{classTransition}{Transition} \&rhs) const 
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classTransition_ab1393a65ad3451f1fb24f8fbf1f4247f}{operator$<$$<$} (ostream \&, const \hyperlink{classTransition}{Transition} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Transition@{Transition}!Transition@{Transition}}
+\index{Transition@{Transition}!Transition@{Transition}}
+\subsubsection[{\texorpdfstring{Transition()}{Transition()}}]{\setlength{\rightskip}{0pt plus 5cm}Transition\+::\+Transition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classTransition_a73b44b2338b11807f77b620a3e810f92}{}\label{classTransition_a73b44b2338b11807f77b620a3e810f92}
+Contructor por defecto clase \hyperlink{classTransition}{Transition} \index{Transition@{Transition}!Transition@{Transition}}
+\index{Transition@{Transition}!Transition@{Transition}}
+\subsubsection[{\texorpdfstring{Transition(char, unsigned int)}{Transition(char, unsigned int)}}]{\setlength{\rightskip}{0pt plus 5cm}Transition\+::\+Transition (
+\begin{DoxyParamCaption}
+\item[{char}]{symbol, }
+\item[{unsigned int}]{tostate}
+\end{DoxyParamCaption}
+)}\hypertarget{classTransition_ab49cf908eba3466ddcd65b144d3c2fc4}{}\label{classTransition_ab49cf908eba3466ddcd65b144d3c2fc4}
+Contructor de clase \hyperlink{classState}{State} 
+\begin{DoxyParams}{Parameters}
+{\em símbolo} & \\
+\hline
+{\em estado} & al que transita \\
+\hline
+\end{DoxyParams}
+\index{Transition@{Transition}!Transition@{Transition}}
+\index{Transition@{Transition}!Transition@{Transition}}
+\subsubsection[{\texorpdfstring{Transition(const Transition \&t)}{Transition(const Transition &t)}}]{\setlength{\rightskip}{0pt plus 5cm}Transition\+::\+Transition (
+\begin{DoxyParamCaption}
+\item[{const {\bf Transition} \&}]{t}
+\end{DoxyParamCaption}
+)}\hypertarget{classTransition_a3a95a02ec9471b3af89c3f1b947048fc}{}\label{classTransition_a3a95a02ec9471b3af89c3f1b947048fc}
+Constructor de copia 
+\begin{DoxyParams}{Parameters}
+{\em transcición} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Transition@{Transition}!getsymbol@{getsymbol}}
+\index{getsymbol@{getsymbol}!Transition@{Transition}}
+\subsubsection[{\texorpdfstring{getsymbol() const }{getsymbol() const }}]{\setlength{\rightskip}{0pt plus 5cm}char Transition\+::getsymbol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classTransition_a26d9d8a40925443d053594fedeae812f}{}\label{classTransition_a26d9d8a40925443d053594fedeae812f}
+Obtener símbolo \begin{DoxyReturn}{Returns}
+símbolo 
+\end{DoxyReturn}
+\index{Transition@{Transition}!gettostate@{gettostate}}
+\index{gettostate@{gettostate}!Transition@{Transition}}
+\subsubsection[{\texorpdfstring{gettostate() const }{gettostate() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Transition\+::gettostate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classTransition_a2cd33705526d2cf4806605b5bd18c46b}{}\label{classTransition_a2cd33705526d2cf4806605b5bd18c46b}
+Obtener nº de estado al que se transita \begin{DoxyReturn}{Returns}
+nº de estado 
+\end{DoxyReturn}
+\index{Transition@{Transition}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Transition@{Transition}}
+\subsubsection[{\texorpdfstring{operator$<$(const Transition \&rhs) const }{operator<(const Transition &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}int Transition\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Transition} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{classTransition_a858e1b8e385b0fd83fdd5719c56cb50f}{}\label{classTransition_a858e1b8e385b0fd83fdd5719c56cb50f}
+Sobrecarga operador de comparación $<$ \index{Transition@{Transition}!operator=@{operator=}}
+\index{operator=@{operator=}!Transition@{Transition}}
+\subsubsection[{\texorpdfstring{operator=(const Transition \&rhs)}{operator=(const Transition &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Transition} \& Transition\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Transition} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{classTransition_aff02d7ec6996e757e62e863f09dda47e}{}\label{classTransition_aff02d7ec6996e757e62e863f09dda47e}
+Sobrecarga operador de asignación \index{Transition@{Transition}!operator==@{operator==}}
+\index{operator==@{operator==}!Transition@{Transition}}
+\subsubsection[{\texorpdfstring{operator==(const Transition \&rhs) const }{operator==(const Transition &rhs) const }}]{\setlength{\rightskip}{0pt plus 5cm}int Transition\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Transition} \&}]{rhs}
+\end{DoxyParamCaption}
+) const}\hypertarget{classTransition_a0eb7dbe96740da9acc628b90c28932ee}{}\label{classTransition_a0eb7dbe96740da9acc628b90c28932ee}
+Sobrecarga operador de comparación == \index{Transition@{Transition}!setsymbol@{setsymbol}}
+\index{setsymbol@{setsymbol}!Transition@{Transition}}
+\subsubsection[{\texorpdfstring{setsymbol(char \&)}{setsymbol(char &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Transition\+::setsymbol (
+\begin{DoxyParamCaption}
+\item[{char \&}]{symbol}
+\end{DoxyParamCaption}
+)}\hypertarget{classTransition_a5a20b15b7f4ab032742ad6391190cc6e}{}\label{classTransition_a5a20b15b7f4ab032742ad6391190cc6e}
+Establecer símbolo 
+\begin{DoxyParams}{Parameters}
+{\em símbolo} & \\
+\hline
+\end{DoxyParams}
+\index{Transition@{Transition}!settostate@{settostate}}
+\index{settostate@{settostate}!Transition@{Transition}}
+\subsubsection[{\texorpdfstring{settostate(int \&)}{settostate(int &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Transition\+::settostate (
+\begin{DoxyParamCaption}
+\item[{int \&}]{tostate}
+\end{DoxyParamCaption}
+)}\hypertarget{classTransition_a6534cb4975a33db21fc273e578c32ff1}{}\label{classTransition_a6534cb4975a33db21fc273e578c32ff1}
+Establecer nº de estado al que se transita 
+\begin{DoxyParams}{Parameters}
+{\em nº} & de estado \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Transition@{Transition}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Transition@{Transition}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Transition} \&}]{transition}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classTransition_ab1393a65ad3451f1fb24f8fbf1f4247f}{}\label{classTransition_ab1393a65ad3451f1fb24f8fbf1f4247f}
+Sobrecarga operador de salida 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Transition.\+hpp\item 
+src/Transition.\+cpp\end{DoxyCompactItemize}

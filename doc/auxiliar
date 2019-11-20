@@ -1,0 +1,111 @@
+## CORTAR EN TROCITOS UN ISTREAM
+#include <sstream> // iss(std::string)
+
+std::stringstream ss(str1);
+      std::istream_iterator<std::string> begin(ss);
+      std::istream_iterator<std::string> end;
+      std::vector<std::string> vstrings(begin, end), vectorToLang;
+
+      for ( std::vector<std::string>::iterator it = vstrings.begin();
+           it != vstrings.end(); ++it) {
+
+
+        for ( int i = 0; i < vectorTransit.size(); i = i + 3 ) {
+          
+          State AuxState;
+          Transition Transition1( vectorTransit[ i + 1 ][ 0 ], vectorTransit[ i + 2 ]);
+          std::set< State >::iterator it;
+          it = Q_.begin();
+          for (auto elem : Q_) {
+	          if ( elem.get_id() ==  vectorTransit[ i ] ) {
+              elem.set_transitions( Transition1 );
+              AuxState = elem;
+              Q_.erase( it );
+              Q_.insert( AuxState );
+            }
+            ++it; 
+          }
+        }
+  }
+
+ ECHALE UN OJO AL CÓDIGO DESDE AHÍ: https://github.com/e-nichols/nfa-to-dfa
+
+void Grammar::define_productions(Dfa& dfa) {
+    int i=0;
+    Rule rule;
+    for(auto q: dfa.getallstates()) {
+        Production production;
+        production.set_state(labels_[i]);
+        nt_.insert(labels_[i]);
+        
+        for(auto t: q.gettransitions()) {//una transción = una producción
+            char t_symbol = t.getsymbol();
+            production.set_terminal(t_symbol);
+            production.set_nt(labels_[t.gettostate()]);
+            alphabet_.insert(t_symbol);
+            
+            rule.push_back(production);
+        
+            
+        }
+        
+        if(q.gettype() == 1) {
+            Production e_prod;
+            e_prod.set_state(labels_[i]);
+            char epsilon = '~';
+            char nt_epsilon = ' ';
+            e_prod.set_terminal(epsilon);
+            e_prod.set_nt(nt_epsilon);
+            rule.push_back(e_prod);
+            endingSymbols_++;
+        }
+        
+        
+        i++;
+    }
+    productions_.push_back(rule);
+}
+
+LECTURA DE LA GRAMATICA ANTES DE CAMBIARLO TODO {
+          Production p1;
+          int labelCount = 0;
+          char StateAux = '\0';
+          char charVoid = '~';
+          if( productionsAux.size() == 1 && !nt_.count(productionsAux[0])) { // tamaño 1 y simbolo terminal
+            p1.set_state( State );
+            p1.set_terminal( productionsAux[0] );
+            RuleAux.push_back(p1);
+          }
+          else {
+            p1.set_state( State );
+            if( productionsAux.size() == 1){ //tamaño 1 y símbolo no terminal
+              p1.set_nt( productionsAux[0] );
+              p1.set_terminal( charVoid );
+              RuleAux.push_back(p1);
+            }
+            else {
+              for (int i = 0; i < productionsAux.size(); i++) {
+                if ( nt_.count(productionsAux[ i+1 ]) ) { 
+                  if ( ! nt_.count(productionsAux[i]) ) { //símbolo terminal y uno no terminal luego
+                    p1.set_terminal( productionsAux[i] );
+                    if ( StateAux != '\0' ) {
+                      p1.set_state( StateAux );
+                    }
+                    p1.set_nt( productionsAux[i+1] );
+                    ++i;
+                    StateAux = '\0';
+                    RuleAux.push_back(p1);
+                  }
+
+                  else if ( nt_.count(productionsAux[ i ])) {
+                    p1.set_terminal( charVoid );
+                    p1.set_nt( productionsAux[i] );
+                    RuleAux.push_back(p1);
+                  }
+                }
+              }
+            }
+          }
+          productions_.push_back(RuleAux);
+        }
+}
